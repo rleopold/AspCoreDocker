@@ -5,7 +5,13 @@ namespace Api.Core.Repositories
 {
     public class PeopleInMemory : IPeople
     {
-        private List<Result> _people = new List<Result>();
+        private List<Result> _people;
+
+        public PeopleInMemory()
+        {
+            _people = new List<Result>();
+        }
+        
         public void Add(Result p)
         {
             _people.Add(p);

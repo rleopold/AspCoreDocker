@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Api.Core.Graph;
@@ -14,7 +16,17 @@ namespace Api.Core.Util
             var json = await response.Content.ReadAsStringAsync();
             var p = JsonConvert.DeserializeObject<RootObject>(json);
 
-            return p.results[0];
+            return p.results.First();
+        }
+
+        public static async Task<List<Result>> GetPeople(int count)
+        {
+            HttpClient client = new HttpClient();
+            var response = await client.GetAsync($"https://randomuser.me/api?inc=email,name,picture&results={count}");
+            var json = await response.Content.ReadAsStringAsync();
+            var p = JsonConvert.DeserializeObject<RootObject>(json);
+
+            return p.results;
         }
     }
 }
