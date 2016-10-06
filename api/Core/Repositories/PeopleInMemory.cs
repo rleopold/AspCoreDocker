@@ -5,18 +5,18 @@ namespace Api.Core.Repositories
 {
     public class PeopleInMemory : IPeople
     {
-        private List<Person> _people = new List<Person>();
-        public void Add(Person p)
+        private List<Result> _people = new List<Result>();
+        public void Add(Result p)
         {
             _people.Add(p);
         }
 
-        public List<Person> All()
+        public List<Result> All()
         {
             return _people;
         }
 
-        public Person GetById(int id)
+        public Result GetById(int id)
         {
             //just do by index here, for example
             if (id > _people.Count - 1)

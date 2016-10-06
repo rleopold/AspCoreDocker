@@ -5,8 +5,8 @@ namespace Api.Core.Repositories
 {
     public interface IPeople
     {
-        Person GetById(int id);
-        List<Person> All();
-        void Add(Person p);
+        Result GetById(int id);
+        List<Result> All();
+        void Add(Result p);
     }
 }

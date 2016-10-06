@@ -18,9 +18,10 @@ public class TestController : Controller
     }
 
     [HttpGet("api/person/getrandom")]
-    public IActionResult GetRandom()
+    public async Task<IActionResult> GetRandom()
     {
-        return Json(new Person());
+        var p = await Api.Core.Util.RandomPerson.Get();
+        return Json(p);
     }
 
 }
