@@ -1,0 +1,20 @@
+.avatar {
+    border-radius: 50%
+}
+
+.respond {
+    font-size: 75px;
+    font-weight: bold;
+    
+}
+    .respond a {
+        text-decoration: none;
+    }
+
+    .respond .yes {
+        color: green;
+    }
+
+    .respond .no {
+        color: red;
+    }

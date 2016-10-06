@@ -11,7 +11,7 @@ namespace ConsoleApplication
             var host = new WebHostBuilder()
                 .UseContentRoot(System.IO.Directory.GetCurrentDirectory())
                 .UseKestrel()
-                .UseUrls("http://*:5000")
+                .UseUrls("http://localhost:5000")
                 .UseStartup<Startup>()
                 .Build();
 
