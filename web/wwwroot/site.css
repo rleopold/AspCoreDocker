@@ -1,10 +1,57 @@
-.avatar {
-    border-radius: 50%
+.card {
+    width: 50%;
+    margin:auto;
+        border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    background: ivory;
 }
 
-.respond {
+.card .slide-out {
+    animation: ease-out 0.5s forwards;
+    
+}
+
+.card .title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: dotted;
+    background: aqua;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card .avatar {
+    padding-top: 15px;
+}
+
+.card .avatar img {
+    border-radius: 50%;
+    display: block;
+    margin:auto;
+    width:200px;
+    height: 200px;
+    
+}
+
+.card .details {
+    text-align: center;
+    font-family: Arial;
+    font-size:20px;
+    
+}
+
+.card .respond {
     font-size: 75px;
     font-weight: bold;
+    text-align: center;
+    border-top: dotted;
+    background: aqua;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     
 }
     .respond a {
