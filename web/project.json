@@ -18,5 +18,8 @@
       },
       "imports": "dnxcore50"
     }
+  },
+  "publishOptions": {
+    "include": "wwwroot"
   }
 }
