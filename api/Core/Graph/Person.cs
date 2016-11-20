@@ -2,27 +2,36 @@ using System.Collections.Generic;
 
 namespace Api.Core.Graph
 {
-    public class Result
-    {
-        public string Email { get; set; }
-        public Name Name { get; set; }
-        public Picture Picture { get; set; }
-
-    }
-
     public class Name
     {
-        public string First { get; set; }
-        public string Last { get; set; }
-        public string Title { get; set; }
+        public string title { get; set; }
+        public string first { get; set; }
+        public string last { get; set; }
+    }
 
+    public class Login
+    {
+        public string username { get; set; }
+        public string password { get; set; }
+        public string salt { get; set; }
+        public string md5 { get; set; }
+        public string sha1 { get; set; }
+        public string sha256 { get; set; }
     }
 
     public class Picture
     {
-        public string Large { get; set; }
-        public string Medium { get; set; }
-        public string Thumbnail { get; set; }
+        public string large { get; set; }
+        public string medium { get; set; }
+        public string thumbnail { get; set; }
+    }
+
+    public class Result
+    {
+        public Name name { get; set; }
+        public string email { get; set; }
+        public Login login { get; set; }
+        public Picture picture { get; set; }
     }
 
     public class Info

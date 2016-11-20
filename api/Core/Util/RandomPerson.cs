@@ -12,7 +12,7 @@ namespace Api.Core.Util
         public static async Task<Result> Get()
         {
             HttpClient client = new HttpClient();
-            var response = await client.GetAsync("https://randomuser.me/api?inc=email,name,picture");
+            var response = await client.GetAsync("https://randomuser.me/api?inc=email,name,picture,login");
             var json = await response.Content.ReadAsStringAsync();
             var p = JsonConvert.DeserializeObject<RootObject>(json);
 
@@ -22,7 +22,7 @@ namespace Api.Core.Util
         public static async Task<List<Result>> GetPeople(int count)
         {
             HttpClient client = new HttpClient();
-            var response = await client.GetAsync($"https://randomuser.me/api?inc=email,name,picture&results={count}");
+            var response = await client.GetAsync($"https://randomuser.me/api?inc=email,name,picture,login&results={count}");
             var json = await response.Content.ReadAsStringAsync();
             var p = JsonConvert.DeserializeObject<RootObject>(json);
 

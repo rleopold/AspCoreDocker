@@ -25,7 +25,7 @@ public class PeopleController : Controller
         else return Json(p);
     }
 
-    [HttpGet("api/person/getrandom")]
+    [HttpGet("api/person/random")]
     public async Task<IActionResult> GetRandom()
     {
         var p = await Api.Core.Util.RandomPerson.Get();
