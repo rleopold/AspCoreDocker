@@ -8,6 +8,7 @@ var config = {
   entry: APP_DIR + '/components/App.jsx',
   output: {
     path: BUILD_DIR,
+    publicPath: '/wwwroot/',
     filename: 'bundle.js'
   },
   module: {

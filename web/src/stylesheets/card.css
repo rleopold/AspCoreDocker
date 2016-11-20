@@ -60,8 +60,10 @@
 
     .respond .yes {
         color: green;
+        padding-left: 30px;
     }
 
     .respond .no {
         color: red;
+        padding-right: 30px;
     }

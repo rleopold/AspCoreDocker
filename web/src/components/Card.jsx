@@ -17,6 +17,7 @@ class Card  extends React.Component {
                 <div className="details">
                     <p>{this.state.name.title} {this.state.name.first} {this.state.name.last}</p>
                     <p>{this.state.login.username}</p>
+                    <p>{this.state.email}</p>
                     <div className="respond">
                         <a href="#" className="no">&#x2717;</a>
                         <a href="#" className="yes">&#x2713;</a>
