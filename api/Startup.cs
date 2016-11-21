@@ -14,6 +14,8 @@ public class Startup
     {
         app.UseCors(builder =>
             builder.WithOrigins("http://localhost:5000", "http://localhost:8080")
+            .AllowAnyMethod()
+            .AllowAnyHeader()
         );
         app.UseMvc();
 
